@@ -1,7 +1,7 @@
 import './App.css'
-import DataSection from './components/data_section/data_section'
 import Form from './components/form/form'
 import Header from './components/header/header'
+import Table from './components/table/table'
 import Text from './components/text/text'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Form />
       <Text />
-      <DataSection />
+      <Table />
       
     </div>
   )

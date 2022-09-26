@@ -1,6 +1,8 @@
 import styles from './table.module.css'
+import Data from '../../../data/data.js';
 
-const Table = (props) => {
+const Table = () => {
+
   return ( 
     <div className={styles.tableContainer}>
       <table className={styles.table}>
@@ -13,13 +15,18 @@ const Table = (props) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className={styles.background}>{props.id}</td>
-            <td className={styles.background}>{props.name}</td>
-            <td className={styles.background}>{props.class}</td>
-            <td className={styles.background}>{props.age}</td>
-          </tr>
-        </tbody>
+          {Data.map((item) => {
+            return (
+              <tr className={styles.trBody}>
+                <td className={styles.background}>{item.id}</td>
+                <td className={styles.background}>{item.name}</td>
+                <td className={styles.background}>{item.class}</td>
+                <td className={styles.background}>{item.age}</td>
+              </tr>
+            )
+          })}
+       </tbody>
+       
       </table>
     </div>
    );

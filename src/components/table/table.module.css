@@ -7,17 +7,23 @@
 
 .table {
   background-color: black;
-  
   width: 50%;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .trTitle {
   height: 40px;
   font-weight: bold;
-  border-radius: 10px ;
+}
+
+.trBody {
+  height: 40px;
 }
 
 .background {
   background-color: white;
-  border-radius: 10px;
+  padding-inline-start: 10px;
+
 }
+
