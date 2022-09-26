@@ -1,0 +1,23 @@
+.tableContainer {
+  display: flex;
+  flex-direction: column; 
+  padding: 25px;
+  gap: 15px;
+}
+
+.table {
+  background-color: black;
+  
+  width: 50%;
+}
+
+.trTitle {
+  height: 40px;
+  font-weight: bold;
+  border-radius: 10px ;
+}
+
+.background {
+  background-color: white;
+  border-radius: 10px;
+}
