@@ -1,15 +1,19 @@
 .tableContainer {
   display: flex;
   flex-direction: column; 
-  padding: 25px;
-  gap: 15px;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .table {
-  background-color: black;
-  width: 50%;
-  border-radius: 10px;
-  border: 1px solid black;
+  width: 90%;
+  overflow:hidden;
+  border-collapse: collapse;
+  border: solid #ccc 1px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
 }
 
 .trTitle {
@@ -18,12 +22,13 @@
 }
 
 .trBody {
-  height: 40px;
+  height: 50px;
 }
 
 .background {
   background-color: white;
   padding-inline-start: 10px;
+  border: solid 1px black;
 
 }
 

@@ -22,6 +22,12 @@ const Data = [
     name: 'Vitor Vasconcelos',
     class: 'T4',
     age: 30
+  },
+  {
+    id: 5,
+    name: 'Nodja Lima',
+    class: 'T18',
+    age: 35
   }
 ]
  
