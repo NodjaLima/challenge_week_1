@@ -16,13 +16,14 @@ const PizzaChart = () => {
     ["De 22 a 25 anos", ageGroup2.length],
     ["De 26 a 29 anos", ageGroup3.length],
     ["De 30 a 36 anos", ageGroup4.length],
-    ["Acima de 33 anos", ageGroup5.length], // CSS-style declaration
+    ["Acima de 33 anos", ageGroup5.length]
   ];
 
   const options = {
     pieHole: 0.4,
     backgroundColor: '#FFDD00',
-    colors: ['#E56E25', '#F18A1F', '#3BA3D2', '#4EB966', '#EFB119']
+    colors: ['#E56E25', '#F18A1F', '#3BA3D2', '#4EB966', '#EFB119'],
+    pieSliceText: 'none'
   };
 
   return ( 

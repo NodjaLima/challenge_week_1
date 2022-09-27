@@ -5,11 +5,38 @@ const Form = (props) => {
     <div>
       <form className={styles.formContainer}>
         <section className={styles.inputsForm}>
-          <input className={styles.inputForm} type="text" name="name" id="name" placeholder="Nome do Estudante"/>
-          <input className={styles.inputForm} type="text" name="class" id="class" placeholder="Turma"/>
-          <input className={styles.inputForm} type="number" name="age" id="age" placeholder="Idade"/>
+          <input 
+            className={styles.inputForm} 
+            type="text" name="name" 
+            id="name" 
+            placeholder="Nome do Estudante" 
+            onChange={props.onBlurName}
+            value={props.valueName}
+          />
+          <input 
+            className={styles.inputForm} 
+            type="text" 
+            name="class" 
+            id="class" 
+            placeholder="Turma" 
+            onChange={props.onBlurClass}
+            value={props.valueClass}
+            />
+          <input 
+            className={styles.inputForm} 
+            type="number" 
+            name="age" 
+            id="age" 
+            placeholder="Idade" 
+            onChange={props.onBlurAge}
+            value={props.valueAge}
+          />
         </section>        
-        <button className={styles.buttonForm} onClick={props.onClick}>Enviar</button>
+        <button 
+          className={styles.buttonForm} 
+          onClick={props.onClick}>
+            Enviar
+        </button>
       </form>
     </div>
    );
