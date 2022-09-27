@@ -7,6 +7,7 @@
 }
 
 .table {
+  background-color: white;
   width: 90%;
   overflow:hidden;
   border-collapse: collapse;
@@ -30,5 +31,9 @@
   padding-inline-start: 10px;
   border: solid 1px black;
 
+}
+
+.iconDelet {
+  margin-top: 8px;
 }
 

@@ -10,3 +10,7 @@ export const postStudent = (obj) => {
   return post
 }
 
+export const deleteStudent = async (id) => {
+  return await axios.delete(`http://localhost:3000/${id}`)
+}
+
