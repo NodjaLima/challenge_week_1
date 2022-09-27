@@ -1,20 +1,20 @@
 import './App.css'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 import Form from './components/form/form'
 import Header from './components/header/header'
 import SectionData from './components/section_data/section_data'
 import Text from './components/text/text'
-import Data from '../data/data'
-import { getStudent } from './requests/request'
+import { getStudent, postStudent } from './requests/request'
+import { StudentContext } from './context/studentContext'
 
 function App() {
 
   const [name, setName] = useState('')
   const [turma, setTurma] = useState('')
   const [age, setAge] = useState('')
-  const [student, setStudent] = useState()
+  const { student, setStudent } = useContext(StudentContext)
   const [control, setControl] = useState(0)
 
   const get = async () => {
@@ -24,17 +24,16 @@ function App() {
 
   useEffect(()=> {
     get()
-  }, [Data] )
+  }, [student] )
 
   const handleClick = (e) => {
     e.preventDefault()
-    const newData = {
-      id: Data.length + 1,
-      name: name,
-      class: turma,
-      age: age
+    const newStudent = {
+      name_student: name,
+      class_student: turma,
+      age_student: parseInt(age)
     }
-    Data.push(newData)
+    postStudent(newStudent)
     setControl(control + 1)
     handleInputValue()
   }

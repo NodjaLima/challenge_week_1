@@ -1,14 +1,17 @@
 import { Chart } from "react-google-charts";
-import Data from "../../../data/data";
+import { StudentContext } from '../../context/studentContext'
+import { useContext } from 'react'
 import styles from './pizza_chart.module.css'
 
 const PizzaChart = () => {
 
-  const ageGroup1 = Data.filter((item) => item.age >= 18 && item.age <= 21 )
-  const ageGroup2 = Data.filter((item) => item.age >= 22 && item.age <= 25 )
-  const ageGroup3 = Data.filter((item) => item.age >= 26 && item.age <= 29 )
-  const ageGroup4 = Data.filter((item) => item.age >= 30 && item.age <= 33 )
-  const ageGroup5 = Data.filter((item) => item.age > 33)
+  const { student } = useContext(StudentContext)
+
+  const ageGroup1 = student.filter((item) => item.age_student >= 18 && item.age_student <= 21 )
+  const ageGroup2 = student.filter((item) => item.age_student >= 22 && item.age_student <= 25 )
+  const ageGroup3 = student.filter((item) => item.age_student >= 26 && item.age_student <= 29 )
+  const ageGroup4 = student.filter((item) => item.age_student >= 30 && item.age_student <= 33 )
+  const ageGroup5 = student.filter((item) => item.age_student > 33)
 
   const data = [
     ["Faixa Etária", 'Quantidade de Alunos'],
