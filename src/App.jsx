@@ -7,15 +7,24 @@ import Header from './components/header/header'
 import SectionData from './components/section_data/section_data'
 import Text from './components/text/text'
 import Data from '../data/data'
+import { getStudent } from './requests/request'
 
 function App() {
 
   const [name, setName] = useState('')
   const [turma, setTurma] = useState('')
   const [age, setAge] = useState('')
+  const [student, setStudent] = useState()
   const [control, setControl] = useState(0)
 
-  useEffect(()=> {}, [Data] )
+  const get = async () => {
+    const Students = await getStudent()
+    setStudent(Students)
+  }
+
+  useEffect(()=> {
+    get()
+  }, [Data] )
 
   const handleClick = (e) => {
     e.preventDefault()
