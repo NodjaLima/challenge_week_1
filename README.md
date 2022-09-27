@@ -12,6 +12,7 @@ HTML
 CSS
 Javascript
 NodeJs
+Axios
 
 * Para verificar a funcionalidade do projeto: *
 
