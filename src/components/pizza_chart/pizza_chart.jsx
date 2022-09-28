@@ -25,8 +25,8 @@ const PizzaChart = () => {
   const options = {
     pieHole: 0.4,
     backgroundColor: '#FFDD00',
-    colors: ['#E56E25', '#F18A1F', '#3BA3D2', '#4EB966', '#EFB119'],
-    pieSliceText: 'none'
+    colors: ['#E56E25', '#F18A1F', '#3BA3D2', '#4EB966', '#EFB119']
+    
   };
 
   return ( 

@@ -12,6 +12,7 @@ const Form = (props) => {
             placeholder="Nome do Estudante" 
             onChange={props.onBlurName}
             value={props.valueName}
+            required
           />
           <input 
             className={styles.inputForm} 
@@ -21,6 +22,7 @@ const Form = (props) => {
             placeholder="Turma" 
             onChange={props.onBlurClass}
             value={props.valueClass}
+            required
             />
           <input 
             className={styles.inputForm} 
@@ -30,6 +32,7 @@ const Form = (props) => {
             placeholder="Idade" 
             onChange={props.onBlurAge}
             value={props.valueAge}
+            required
           />
         </section>        
         <button 

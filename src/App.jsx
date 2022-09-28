@@ -33,7 +33,11 @@ function App() {
       class_student: turma,
       age_student: parseInt(age)
     }
-    postStudent(newStudent)
+    postStudent(newStudent).then((res) => {
+      alert("Cadastro realizado com sucesso")
+    }).catch((e) => {
+      alert('Verifique os dados. Cadastro não realizado!')
+    })
     setControl(control + 1)
     handleInputValue()
   }
