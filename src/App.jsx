@@ -15,7 +15,6 @@ function App() {
   const [turma, setTurma] = useState('')
   const [age, setAge] = useState('')
   const { student, setStudent } = useContext(StudentContext)
-  const [control, setControl] = useState(0)
 
   const get = async () => {
     const Students = await getStudent()
@@ -38,7 +37,6 @@ function App() {
     }).catch((e) => {
       alert('Verifique os dados. Cadastro não realizado!')
     })
-    setControl(control + 1)
     handleInputValue()
   }
 
