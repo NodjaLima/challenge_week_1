@@ -13,6 +13,7 @@ https://challenge-week-1.vercel.app/
 ReactJs
 Vite
 React Google Charts
+React Spinners
 HTML
 CSS
 Javascript

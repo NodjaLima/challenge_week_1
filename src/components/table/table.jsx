@@ -5,19 +5,17 @@ import delet from '../../images/delete.svg'
 import { deleteStudent } from '../../requests/request'
 import Modal from 'react-modal';
 
-const Table = () => {
 
+const Table = () => {
   const { student } = useContext(StudentContext)
   const [modalConfirm, setModalConfirm] = useState(false)
   const [id, setId] = useState()
 
   const handleDelete = async (id) => {
-
     await deleteStudent(id)
     .then(
       setModalConfirm(false)
     )
-        
   }
 
   return ( 
@@ -34,8 +32,7 @@ const Table = () => {
         </thead>
         <tbody>
           {student.map((item) => {
-            return (
-              
+            return (              
               <tr className={styles.trBody}>
                 <td className={styles.background}>{item.id_student}</td>
                 <td className={styles.background}>{item.name_student}</td>

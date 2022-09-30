@@ -27,6 +27,7 @@ function App() {
 
   useEffect(()=> {
     get()
+
   }, [student] )
 
   const handleClick = (e) => {
@@ -55,6 +56,7 @@ function App() {
   }
 
   return (
+
     <div className="App">
       <Header />
       <Form 
