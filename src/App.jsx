@@ -1,6 +1,7 @@
 import './App.css'
 
 import { useState, useEffect, useContext } from 'react'
+import Modal from 'react-modal';
 
 import Form from './components/form/form'
 import Header from './components/header/header'
@@ -15,6 +16,9 @@ function App() {
   const [turma, setTurma] = useState('')
   const [age, setAge] = useState('')
   const { student, setStudent } = useContext(StudentContext)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [modalError, setModalError] = useState(false)
+
 
   const get = async () => {
     const Students = await getStudent()
@@ -33,9 +37,9 @@ function App() {
       age_student: parseInt(age)
     }
     postStudent(newStudent).then((res) => {
-      alert("Cadastro realizado com sucesso")
+      setModalIsOpen(true)
     }).catch((e) => {
-      alert('Verifique os dados. Cadastro não realizado!')
+      setModalError(true)
     })
     handleInputValue()
   }
@@ -44,6 +48,10 @@ function App() {
     setName('')
     setTurma('')
     setAge('')
+  }
+
+  const handleModalIsClose = () => {
+    setModalIsOpen(false)
   }
 
   return (
@@ -66,7 +74,22 @@ function App() {
           handleClick(e)
           }}/>
       <Text />
-      <SectionData />      
+      <SectionData />  
+      <Modal 
+        isOpen={modalIsOpen}
+        className='modalStyle'
+        >
+        <h2>Estudante cadastrado com sucesso</h2>
+        <button className='buttonModal' onClick={handleModalIsClose}>Ok</button>  
+      </Modal>
+      <Modal 
+        isOpen={modalError}
+        className='modalStyle'
+        >
+        <h2>Verifique os dados. Cadastro não realizado!</h2>
+        <button className='buttonModal' onClick={(e) => {setModalError(false)}}>Ok</button>  
+      </Modal>
+
     </div>
   )
 }

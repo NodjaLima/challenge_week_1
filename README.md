@@ -4,6 +4,10 @@ Repositório com o frontend do desafio proposto pela Resilia Educação.
 
 O desafio para o frontend foi reproduzir o layout fornecido, com as funcionalidades do Briefing (formulário, tabela e grafico - dinamicos).
 
+## Link do site:
+
+https://challenge-week-1.vercel.app/
+
 ## Tecnologias utilizadas: 
 
 ReactJs
@@ -31,7 +35,7 @@ npm run dev
 
 A partir de então, o frontend da aplicação estará disponível no seu navegador, na porta informada em seu console. 
 
-Essa aplicação está configurada para usar uma API Rest construída especialmente para ela. Esse API pode ser encontrada no repositório https://github.com/NodjaLima/challenge_week_resilia_backend e para que tudo funciona, também será necessário seguir os passos da documentação para clone e instalação, visto que os dois projetos estão configurados para rodar localmente. 
+Essa aplicação está configurada para usar uma API Rest construída especialmente para ela. Esse API pode ser encontrada no repositório https://github.com/NodjaLima/challenge_week_resilia_backend.
 
 ## As funcionalidades de site: 
 

@@ -2,3 +2,26 @@
   display: flex;
   flex-direction: column;
 }
+
+.modalStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #000000;
+  height: auto;
+  width: auto;
+  padding: 15px;
+  margin: 20%;
+  gap: 15px;
+  border-radius: 15px;
+}
+
+.buttonModal {
+  Width: 164.04px;
+  Height: 52px;
+  background-color: #FFDD00;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
