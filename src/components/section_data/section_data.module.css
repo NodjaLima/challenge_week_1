@@ -13,3 +13,10 @@
 		top: 60%;
 		margin-left:-110px;
 }
+
+@media (max-width: 700px) {
+  .dataContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+}
